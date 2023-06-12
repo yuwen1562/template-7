@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+header .navbar .headerTitle {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-right: 20px;
+}
+header .navbar .navbar-nav .nav-link {
+  margin-right: 15px;
+}
+header .navbar .currentTime {
+  height: 100%;
+  color: #ffffff;
+}
+header .navbar .account {
+  color: #ffffff;
+  margin: 0 15px;
+}
+
+.main {
+  background: url(../img/bg.png) no-repeat center;
+  background-size: 100% 100%;
+  height: calc(100% - 64px);
+}
+.main .hexagon {
+  -webkit-clip-path: polygon(6% 0%, 94% 0%, 100% 60%, 100% 100%, 0 100%, 0 60%);
+          clip-path: polygon(6% 0%, 94% 0%, 100% 60%, 100% 100%, 0 100%, 0 60%);
+  border: 1px solid #1f9dff;
+  background-color: rgba(43, 92, 163, 0.5);
+  color: #1eb6fe;
+}
+.main .fa-circle-play,
+.main .fa-tower-broadcast,
+.main .fa-crosshairs {
+  padding: 0 8px 0 17px;
+}
+.main .left,
+.main .right {
+  width: 25%;
+}
+.main .left .hexagon {
+  margin: 10px 5px 5px 10px;
+}
+.main .left .monitor {
+  background: url(../img/videoBox.png) no-repeat center;
+  background-size: 100% 100%;
+  margin: 5px 5px 5px 10px;
+  padding: 5px;
+}
+.main .left .monitor .monitorTitle {
+  justify-content: space-between;
+}
+.main .left .monitor .monitorTitle .monitorText {
+  color: #1eb6fe;
+}
+.main .left .monitor .monitorPic {
+  text-align: center;
+}
+.main .left .alertInfo {
+  margin: 5px 5px 10px 10px;
+  background-color: rgba(43, 92, 163, 0.2);
+}
+.main .left .alertInfo .alertTitle {
+  color: #1eb6fe;
+  border: 1px solid #1f9dff;
+}
+.main .left .alertInfo .alertContent {
+  font-size: 0.8rem;
+  color: #1f9dff;
+  border: 1px solid #1f9dff;
+  overflow-y: scroll;
+}
+.main .left .alertInfo .alertContent::-webkit-scrollbar {
+  display: none;
+}
+.main .left .alertInfo .alertContent .alertRecord {
+  border-bottom: 5px solid rgba(13, 202, 240, 0.1);
+  padding: 8px;
+}
+.main .middle {
+  width: 50%;
+}
+.main .middle .caseContent {
+  margin: 10px 25px 5px;
+}
+.main .middle .caseContent .caseRecord {
+  margin: 0 25px;
+}
+.main .middle .caseContent .caseRecord .caseStyle {
+  color: #00f0ff;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.main .middle .caseContent .caseRecord .caseNum {
+  margin-bottom: 10px;
+}
+.main .middle .caseContent .caseRecord .caseImg {
+  position: relative;
+  width: 15vh;
+  height: 12vh;
+  margin-bottom: 10px;
+}
+.main .middle .caseContent .caseRecord .caseImg .caseBg {
+  position: absolute;
+  background: url(../img/anaBg.png) no-repeat center;
+  background-size: 100% 100%;
+  width: 15vh;
+  height: 12vh;
+}
+.main .middle .caseContent .caseRecord .caseImg .caseRotate {
+  position: absolute;
+  background: url(../img/ana02.png) no-repeat center;
+  background-size: 100% 100%;
+  width: 15vh;
+  height: 12vh;
+}
+.main .middle .caseContent .total .caseImg .caseRotate {
+  -webkit-animation: totalRotate 8s linear infinite;
+          animation: totalRotate 8s linear infinite;
+}
+.main .middle .caseContent .process .caseImg .caseRotate {
+  -webkit-animation: processRotate 8s linear infinite;
+          animation: processRotate 8s linear infinite;
+}
+.main .middle .caseContent .complaint .caseImg .caseRotate {
+  -webkit-animation: complaintRotate 8s linear infinite;
+          animation: complaintRotate 8s linear infinite;
+}
+.main .middle .mapBg {
+  background: url(../img/map_bg.png) no-repeat center;
+  background-size: 100% 100%;
+  margin: 5px 5px 10px 5px;
+  padding: 10px;
+}
+.main .right .hexagon {
+  margin: 10px 10px 5px 5px;
+}
+.main .right .vedioPoint {
+  background: url(../img/rightCon01.png) no-repeat center;
+  background-size: 100% 100%;
+  margin: 5px 10px 5px 5px;
+  padding: 8px;
+  height: 30%;
+  overflow-y: scroll;
+}
+.main .right .vedioPoint::-webkit-scrollbar {
+  display: none;
+}
+.main .right .vedioPoint .vedioRecord {
+  width: 33.3%;
+  border: 1px solid #0dcaf0;
+  margin: 2px;
+  justify-content: space-between;
+}
+.main .right .vedioPoint .vedioRecord .vedioPointText {
+  color: #0dcaf0;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+.main .right .vedioPoint .vedioRecord .vedioPointState {
+  width: 20px;
+  height: 20px;
+}
+.main .right .moreInfo {
+  background: url(../img/rightcon2_bg.png) no-repeat center;
+  background-size: 100% 100%;
+  margin: 5px 10px 10px 5px;
+}
+.main .right .moreInfo .infoTitle {
+  background: url(../img/rightCon02Top.png) no-repeat center;
+  background-size: 100% 100%;
+  color: #0dcaf0;
+  padding-left: 65px;
+  justify-content: space-around;
+}
+.main .right .moreInfo .infoTitle .carInfo,
+.main .right .moreInfo .infoTitle .personInfo,
+.main .right .moreInfo .infoTitle .addressInfo {
+  background-size: 100% 100%;
+  padding: 3px 15px;
+  cursor: pointer;
+}
+.main .right .moreInfo .infoTitle .carInfo {
+  background: url(../img/rightCon02LiBg.png) no-repeat center;
+}
+.main .right .moreInfo .infoTitle .personInfo {
+  background: unset;
+}
+.main .right .moreInfo .infoTitle .addressInfo {
+  background: unset;
+}
+.main .right .moreInfo .infoContent .search {
+  color: #85acd5;
+  padding: 10px 15px 8px;
+  border-bottom: 1px solid #1f9dff;
+}
+.main .right .moreInfo .infoContent .search .infoForm {
+  font-size: 0.8rem;
+  white-space: nowrap;
+  height: 25px;
+  align-items: center;
+}
+.main .right .moreInfo .infoContent .search .infoForm .form-label {
+  margin-bottom: unset;
+}
+.main .right .moreInfo .infoContent .search .infoForm .form-select {
+  color: #85acd5;
+  border-color: #85acd5;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 0.8rem;
+  padding: 0 2.25rem 0 0.75rem;
+}
+.main .right .moreInfo .infoContent .search .infoForm .form-control {
+  color: #85acd5;
+  border-color: #85acd5;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 0.8rem;
+  padding: 0 0.5rem;
+}
+.main .right .moreInfo .infoContent .search .startSearch {
+  color: #ffffff;
+  font-size: 0.8rem;
+  border: unset;
+  background: url(../img/tailBut.png) no-repeat center;
+  background-size: 100% 100%;
+  padding: 0.1rem 0.75rem;
+}
+.main .right .moreInfo .infoContent .carDetail {
+  overflow-y: scroll;
+}
+.main .right .moreInfo .infoContent .carDetail::-webkit-scrollbar {
+  display: none;
+}
+.main .right .moreInfo .infoContent .carDetail .carDetailRecord {
+  font-size: 0.8rem;
+  color: #1f9dff;
+  border-bottom: 1px solid #1f9dff;
+  padding: 10px 0;
+}
+.main .right .moreInfo .infoContent .carDetail .carDetailRecord .detailPic {
+  width: 25%;
+  height: 10vh;
+  margin: 0 10px;
+}
+.main .right .moreInfo .infoContent .carDetail .carDetailRecord .detailInfo {
+  width: 55%;
+  margin: 0 10px;
+}
+.main .right .moreInfo .infoContent .carDetail .carDetailRecord .detailBtn {
+  width: 20%;
+  margin: 0 10px;
+}
+.main .right .moreInfo .infoContent .carDetail .carDetailRecord .detailBtn .carPosition,
+.main .right .moreInfo .infoContent .carDetail .carDetailRecord .detailBtn .detail {
+  background: url(../img/tailBut.png) no-repeat center;
+  background-size: 100% 100%;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+@-webkit-keyframes totalRotate {
+  0% {
+    transform: rotateX(50deg) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(50deg) rotateZ(360deg);
+  }
+}
+
+@keyframes totalRotate {
+  0% {
+    transform: rotateX(50deg) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(50deg) rotateZ(360deg);
+  }
+}
+@-webkit-keyframes processRotate {
+  0% {
+    transform: rotateX(50deg) rotateZ(180deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateZ(540deg);
+  }
+}
+@keyframes processRotate {
+  0% {
+    transform: rotateX(50deg) rotateZ(180deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateZ(540deg);
+  }
+}
+@-webkit-keyframes complaintRotate {
+  0% {
+    transform: rotateX(50deg) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(50deg) rotateZ(360deg);
+  }
+}
+@keyframes complaintRotate {
+  0% {
+    transform: rotateX(50deg) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(50deg) rotateZ(360deg);
+  }
+}/*# sourceMappingURL=index.css.map */

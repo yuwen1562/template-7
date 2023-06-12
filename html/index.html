@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link
+      rel="stylesheet"
+      href="../module/bootstrap-5.2.2-dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../module/fontawesome-free-6.2.1-web/css/all.css"
+    />
+    <script src="../module/jquery-3.6.1.min.js"></script>
+    <script src="../module/bootstrap-5.2.2-dist/js/bootstrap.js"></script>
+    <script src="../module/moment-with-locales.min.js"></script>
+    <script src="../module/fontawesome-free-6.2.1-web/js/all.js"></script>
+    <title>EME 戰情看板-7</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <div class="headerTitle">EME 戰情看板-7</div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#"
+                >視頻監控</a
+              >
+              <!-- <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#">Disabled</a> -->
+            </div>
+          </div>
+          <div id="currentTime" class="currentTime"></div>
+          <div class="account">eme</div>
+        </div>
+      </nav>
+    </header>
+    <div class="main d-flex">
+      <div class="left">
+        <div class="hexagon">
+          <i class="fa-regular fa-circle-play"></i>監控視頻
+        </div>
+        <div class="monitor">
+          <div>
+            <div class="monitorTitle d-flex">
+              <div class="monitorText">石門水庫</div>
+              <img class="stateDot" src="../img/li01.png" />
+            </div>
+            <div class="monitorPic">
+              <iframe
+                width="270"
+                height="157"
+                src="https://www.youtube.com/embed/1OTZ9rjFv78?autoplay=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div>
+            <div class="monitorTitle d-flex">
+              <div class="monitorText">101大樓</div>
+              <img class="stateDot" src="../img/li01.png" />
+            </div>
+            <div class="monitorPic">
+              <iframe
+                width="270"
+                height="157"
+                src="https://www.youtube.com/embed/z_fY1pj1VBw?autoplay=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="alertInfo">
+          <div class="alertTitle">
+            <i class="fa-solid fa-tower-broadcast"></i>警報信息
+          </div>
+          <div class="alertContent">
+            <div class="alertRecord d-none">
+              <div class="d-flex justify-content-between">
+                <div class="accidentLocation"></div>
+                <div class="alertTime"></div>
+              </div>
+              <div class="accidentRemark"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="caseContent d-flex">
+          <div class="caseRecord d-none">
+            <div class="caseNum caseStyle"></div>
+            <div class="caseImg">
+              <div class="caseBg"></div>
+              <div class="caseRotate"></div>
+            </div>
+            <div class="caseText caseStyle"></div>
+          </div>
+        </div>
+        <div class="mapBg">
+          <iframe
+            id="middleMap"
+            width="600"
+            height="450"
+            style="border: 0"
+            loading="lazy"
+            allowfullscreen
+            src="https://www.google.com/maps/embed/v1/view?key=AIzaSyCQlj5moNGY9Lo1ms0_3Xy-FfqDHkA4ut4&center=25.05484, 121.36698&zoom=15&maptype=satellite"
+          ></iframe>
+        </div>
+      </div>
+      <div class="right">
+        <div class="hexagon">
+          <i class="fa-solid fa-crosshairs"></i>監視器快捷點位
+        </div>
+        <div class="vedioPoint">
+          <div class="vedioRecord d-flex d-none">
+            <div class="vedioPointText"></div>
+            <img class="vedioPointState" />
+          </div>
+        </div>
+        <div class="moreInfo">
+          <div class="infoTitle d-flex">
+            <div class="carInfo">車輛資訊</div>
+            <div class="personInfo">人員資訊</div>
+            <div class="addressInfo">地名地址</div>
+          </div>
+          <div class="infoContent">
+            <div class="search">
+              <div class="row mb-3">
+                <div class="col-6 d-flex infoForm">
+                  <label for="carColor" class="form-label">車輛顏色：</label>
+                  <select id="carColor" class="form-select">
+                    <option>白色</option>
+                  </select>
+                </div>
+                <div class="col-6 d-flex infoForm">
+                  <label for="carBrand" class="form-label">車輛品牌：</label>
+                  <input
+                    id="carBrand"
+                    type="text"
+                    class="form-control"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 d-flex infoForm">
+                  <label for="carNum" class="form-label">車牌號碼：</label>
+                  <input
+                    id="carNum"
+                    type="text"
+                    class="form-control"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+              <div class="text-end">
+                <button class="btn startSearch">開始搜索</button>
+              </div>
+            </div>
+            <div class="carDetail">
+              <div class="carDetailRecord d-flex d-none">
+                <div class="detailPic"></div>
+                <div class="detailInfo">
+                  <div class="carNumber"></div>
+                  <div class="carColor"></div>
+                  <div class="carBrand"></div>
+                </div>
+                <div class="detailBtn">
+                  <div class="carPosition">定位</div>
+                  <div class="detail">詳情</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../js/fackData.js"></script>
+  <script src="../js/index.js"></script>
+</html>

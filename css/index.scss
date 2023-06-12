@@ -1,0 +1,361 @@
+$white: #ffffff;
+$textColorLight: #00f0ff;
+$textColor: #1eb6fe;
+$textColorDeep: #1f9dff;
+$lineColorLight: #0dcaf0;
+$lineColorDeep: #2b5ca3;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+ul,
+li {
+  list-style: none;
+}
+
+header {
+  .navbar {
+    .headerTitle {
+      color: $white;
+      font-size: 2rem;
+      margin-right: 20px;
+    }
+    .navbar-nav {
+      .nav-link {
+        margin-right: 15px;
+      }
+    }
+    .currentTime {
+      height: 100%;
+      color: $white;
+    }
+    .account {
+      color: $white;
+      margin: 0 15px;
+    }
+  }
+}
+
+.main {
+  background: url(../img/bg.png) no-repeat center;
+  background-size: 100% 100%;
+  height: calc(100% - 64px);
+
+  .hexagon {
+    clip-path: polygon(6% 0%, 94% 0%, 100% 60%, 100% 100%, 0 100%, 0 60%);
+    border: 1px solid $textColorDeep;
+    background-color: rgba(43, 92, 163, 0.5);
+    color: $textColor;
+  }
+
+  .fa-circle-play,
+  .fa-tower-broadcast,
+  .fa-crosshairs {
+    padding: 0 8px 0 17px;
+  }
+
+  .left,
+  .right {
+    width: 25%;
+  }
+  .left {
+    .hexagon {
+      margin: 10px 5px 5px 10px;
+    }
+    .monitor {
+      background: url(../img/videoBox.png) no-repeat center;
+      background-size: 100% 100%;
+      margin: 5px 5px 5px 10px;
+      padding: 5px;
+      // border: 1px solid $lineColorLight;
+
+      .monitorTitle {
+        justify-content: space-between;
+
+        .monitorText {
+          color: $textColor;
+        }
+      }
+      .monitorPic {
+        text-align: center;
+      }
+    }
+    .alertInfo {
+      margin: 5px 5px 10px 10px;
+      background-color: rgba(43, 92, 163, 0.2);
+
+      .alertTitle {
+        color: $textColor;
+        border: 1px solid $textColorDeep;
+      }
+      .alertContent {
+        font-size: 0.8rem;
+        color: $textColorDeep;
+        border: 1px solid $textColorDeep;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .alertRecord {
+          border-bottom: 5px solid rgba(13, 202, 240, 0.1);
+          padding: 8px;
+        }
+      }
+    }
+  }
+  .middle {
+    width: 50%;
+
+    .caseContent {
+      margin: 10px 25px 5px;
+
+      .caseRecord {
+        margin: 0 25px;
+
+        .caseStyle {
+          color: $textColorLight;
+          text-align: center;
+          font-size: 1.5rem;
+        }
+        .caseNum {
+          margin-bottom: 10px;
+        }
+        .caseImg {
+          position: relative;
+          width: 15vh;
+          height: 12vh;
+          margin-bottom: 10px;
+
+          .caseBg {
+            position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            background: url(../img/anaBg.png) no-repeat center;
+            background-size: 100% 100%;
+            width: 15vh;
+            height: 12vh;
+          }
+          .caseRotate {
+            position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            background: url(../img/ana02.png) no-repeat center;
+            background-size: 100% 100%;
+            width: 15vh;
+            height: 12vh;
+          }
+        }
+      }
+      .total {
+        .caseImg {
+          .caseRotate {
+            animation: totalRotate 8s linear infinite;
+          }
+        }
+      }
+      .process {
+        .caseImg {
+          .caseRotate {
+            animation: processRotate 8s linear infinite;
+          }
+        }
+      }
+      .complaint {
+        .caseImg {
+          .caseRotate {
+            animation: complaintRotate 8s linear infinite;
+          }
+        }
+      }
+    }
+    .mapBg {
+      background: url(../img/map_bg.png) no-repeat center;
+      background-size: 100% 100%;
+      margin: 5px 5px 10px 5px;
+      padding: 10px;
+
+      #middleMap {
+        // height: 50vh;
+      }
+    }
+  }
+  .right {
+    .hexagon {
+      margin: 10px 10px 5px 5px;
+    }
+    .vedioPoint {
+      background: url(../img/rightCon01.png) no-repeat center;
+      background-size: 100% 100%;
+      margin: 5px 10px 5px 5px;
+      padding: 8px;
+      height: 30%;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .vedioRecord {
+        width: 33.3%;
+        border: 1px solid $lineColorLight;
+        margin: 2px;
+        justify-content: space-between;
+
+        .vedioPointText {
+          color: $lineColorLight;
+          white-space: nowrap;
+          font-size: 0.8rem;
+        }
+        .vedioPointState {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    .moreInfo {
+      background: url(../img/rightcon2_bg.png) no-repeat center;
+      background-size: 100% 100%;
+      margin: 5px 10px 10px 5px;
+
+      .infoTitle {
+        background: url(../img/rightCon02Top.png) no-repeat center;
+        background-size: 100% 100%;
+        color: $lineColorLight;
+        padding-left: 65px;
+        justify-content: space-around;
+
+        .carInfo,
+        .personInfo,
+        .addressInfo {
+          background-size: 100% 100%;
+          padding: 3px 15px;
+          cursor: pointer;
+        }
+
+        .carInfo {
+          background: url(../img/rightCon02LiBg.png) no-repeat center;
+        }
+        .personInfo {
+          background: unset;
+        }
+        .addressInfo {
+          background: unset;
+        }
+      }
+      .infoContent {
+        .search {
+          color: #85acd5;
+          padding: 10px 15px 8px;
+          border-bottom: 1px solid $textColorDeep;
+
+          .infoForm {
+            font-size: 0.8rem;
+            white-space: nowrap;
+            height: 25px;
+            align-items: center;
+
+            .form-label {
+              margin-bottom: unset;
+            }
+            .form-select {
+              color: #85acd5;
+              border-color: #85acd5;
+              background-color: rgba(0, 0, 0, 0);
+              font-size: 0.8rem;
+              padding: 0 2.25rem 0 0.75rem;
+            }
+            .form-control {
+              color: #85acd5;
+              border-color: #85acd5;
+              background-color: rgba(0, 0, 0, 0);
+              font-size: 0.8rem;
+              padding: 0 0.5rem;
+            }
+          }
+          .startSearch {
+            color: #ffffff;
+            font-size: 0.8rem;
+            border: unset;
+            background: url(../img/tailBut.png) no-repeat center;
+            background-size: 100% 100%;
+            padding: 0.1rem 0.75rem;
+          }
+        }
+        .carDetail {
+          overflow-y: scroll;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          .carDetailRecord {
+            font-size: 0.8rem;
+            color: $textColorDeep;
+            border-bottom: 1px solid $textColorDeep;
+            padding: 10px 0;
+
+            .detailPic {
+              // background: url(../img/liImg.png) no-repeat center;
+              width: 25%;
+              height: 10vh;
+              margin: 0 10px;
+            }
+            .detailInfo {
+              width: 55%;
+              margin: 0 10px;
+            }
+            .detailBtn {
+              width: 20%;
+              margin: 0 10px;
+
+              .carPosition,
+              .detail {
+                background: url(../img/tailBut.png) no-repeat center;
+                background-size: 100% 100%;
+                color: #ffffff;
+                text-align: center;
+                margin-bottom: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes totalRotate {
+  0% {
+    transform: rotateX(50deg) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(50deg) rotateZ(360deg);
+  }
+}
+@keyframes processRotate {
+  0% {
+    transform: rotateX(50deg) rotateZ(180deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateZ(540deg);
+  }
+}
+@keyframes complaintRotate {
+  0% {
+    transform: rotateX(50deg) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(50deg) rotateZ(360deg);
+  }
+}
